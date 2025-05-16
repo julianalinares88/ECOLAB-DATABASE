@@ -10,6 +10,7 @@ const productsRouter = require("./server/routes/products.router");
 const screen1EventsRouter = require("./server/routes/screen1Events.router");
 const usersRouter = require("./server/routes/user.router");
 const ordersRouter = require("./server/routes/orders.router");
+const postsRouter = require("./server/routes/posts.router");
 const { initSocketInstance } = require("./server/services/socket.service");
 
 const PORT = 5050;
@@ -27,6 +28,7 @@ app.use("/api/products", productsRouter);
 app.use("/api/events", screen1EventsRouter); 
 app.use("/api/users", usersRouter);
 app.use("/api/orders", ordersRouter);
+app.use("/api/posts", postsRouter);
 
 // Sockets
 initSocketInstance(httpServer);

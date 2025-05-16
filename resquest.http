@@ -21,3 +21,35 @@ Content-Type: application/json
 ###
 
 DELETE http://localhost:5050/users/0bf147d2-5058-4267-b7f7-eb40f8bfdb92
+
+
+1. Obtener todos los registros de una tabla 
+http://localhost:5050/api/products
+
+
+2. Filtrar por una condición simple
+http://localhost:5050/api/products/precio/menor50
+
+
+3. Seleccionar campos específicos
+http://localhost:5050/api/users/campos *
+
+
+4. Ordenar resultados por una columna
+http://localhost:5050/api/orders
+
+
+ 5. Filtrar por múltiples condiciones
+http://localhost:5050/api/products/filter?minPrice=30
+
+
+6. Buscar por texto parcial
+http://localhost:5050/api/posts/search?keyword=tutorial
+
+
+7. Paginación con limit y offset
+http://localhost:5050/api/products/paginated?page=1&limit=10
+
+
+8. Traer registros relacionados con el usuario actual
+http://localhost:5050/api/products/user/3
